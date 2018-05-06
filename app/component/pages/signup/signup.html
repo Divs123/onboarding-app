@@ -1,0 +1,10 @@
+<div class="container login-bg-color">
+    <div class="login-form">
+        <form method="post" novalidate ng-submit="submitSignupForm()">
+            <input type="text" placeholder="Email" ng-model="signupForm.email" ng-required>
+            <input type="password" placeholder="Password" ng-model="signupForm.password" ng-required>
+            <button>signup</button>
+            <p>Already Registered <a ui-sref="page.login">Login</a></p>
+        </form>
+    </div>
+</div>

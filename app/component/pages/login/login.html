@@ -1,0 +1,13 @@
+<div class="container login-bg-color">
+     <loading></loading>  
+    <div class="login-form">
+        <form method="post" novalidate ng-submit="submitLoginForm()">
+            <input type="text" name="email" placeholder="Email" ng-model="loginForm.email" required>
+            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
+            <input type="password" name="password" placeholder="Password" ng-model="loginForm.password" required>
+            <button>login</button>
+            <p>Not Registered <a ui-sref="page.signup">Create an account</a></p>
+        </form>
+    </div>
+
+</div>

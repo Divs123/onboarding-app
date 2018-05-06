@@ -1,0 +1,39 @@
+<div class="container">
+    <h2 class="listing text-center">Users Listing</h2>
+    <loading></loading>
+    <div>
+        <table class="table tabele-bordered" >
+            <thead>
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">First Name</th>
+                    <th class="text-center">Last Name</th>
+                    <th class="text-center">Profile Image</th>
+                </tr>
+            </thead>
+            <tbody class="panel panel-default">
+                <tr ng-repeat="data in users"> 
+                   <td class="text-center">{{data.id}}</td>
+                   <td class="text-center">{{data.first_name}}</td>  
+                   <td class="text-center">{{data.last_name}}</td>
+                   <td class="text-center"><img ng-src="{{data.avatar}}" class="text-center img-logo">
+                    <button type="button" class="btn update-img-btn" ng-click="openFileDialog()">Update Image</button>
+                        <input type="file" id="file" accept="image/*" style="display: none;" onchange="angular.element(this).scope().file_to_upload(this.files)">
+                   </td>   
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <div class="text-right">
+    <div class="pagination">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item" ng-class="prevPageDisabled()"><a ng-click="previousPage(currentPage)" class="page-link">Previous</a></li>
+                <li class="page-item" ng-class="{active:m==currentPage}" ng-repeat="m in range()" ><a ng-click="setCurrentPage(m)" class="page-link">{{m}}</a></li>
+                <li class="page-item" ng-class="nextPageDisabled()"><a ng-click="nextPage(currentPage)" class="page-link">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+</div>

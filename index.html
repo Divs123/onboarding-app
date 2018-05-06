@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="onboardingApp">
+
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title data-ng-bind="pageTitle()">Onboarding</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="app/css/custom-style.css">
+</head>
+
+<body>
+    <div ui-view="" data-autoscroll="false"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+    <!--jQuery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="app/main.js"></script>
+    <script src="app/route.js"></script>
+    <script src="app/shared/loader.directive.js"></script>
+    <script src="app/component/pages/page-ctrl.js"></script>
+    <script src="app/component/pages/login/login-ctrl.js"></script>
+    <script src="app/component/pages/signup/signup-ctrl.js"></script>
+    <script src="app/component/app/app-ctrl.js"></script>
+    <script src="app/component/app/user-listing/userlisting-ctrl.js"></script>
+</body>
+</html>
